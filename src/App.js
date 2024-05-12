@@ -1,6 +1,6 @@
 import './App.css';
 import item from './ShopItemFunc.json';
-import { ShopItemFunc } from './ShopItemFunc';
+import  ShopItemFunc  from './ShopItemFunc';
 
 function App() {
   return (
