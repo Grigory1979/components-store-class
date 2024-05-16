@@ -1,20 +1,22 @@
-import './App.css';
-import item from './ShopItemFunc.json';
-import  ShopItemFunc  from './ShopItemFunc';
+import { useState } from 'react'
+import './App.css'
+import ShopItemClass from "./ShopItemClass";
+import ShopModel from "./models/ShopModel";
 
 function App() {
+  const item = ShopModel.items;
+
   return (
     <div className="container">
-      <div className="background-element">
-      </div>
+      <div className="background-element"></div>
       <div className="highlight-window">
-        <div className='highlight-overlay'></div>
+        <div className="highlight-overlay"></div>
       </div>
       <div className="window">
-        <ShopItemFunc item={item} />
+        <ShopItemClass item={item} />
       </div>
     </div>
-  )
+  );
 }
 
 export default App;
