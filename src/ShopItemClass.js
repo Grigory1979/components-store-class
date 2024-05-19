@@ -5,7 +5,7 @@ import ShopModel from './models/ShopModel';
 class ShopItemClass extends React.Component {
 
   render() {
-    const { brand, title, description, descriptionFull, price, currency } = this.props.info;
+    const { brand, title, description, descriptionFull, price, currency } = this.props.item;
     return (
         <div className="main-content">
       <h2>{brand}</h2>
@@ -17,7 +17,7 @@ class ShopItemClass extends React.Component {
       <div className="highlight-window mobile"><div className="highlight-overlay"></div></div>
       <div className="divider"></div>
       <div className="purchase-info">
-        <div className="price">{currency} {price}</div>
+      <div className="price">{`${currency}${price.toFixed(2)}`}</div>
         <button>Добавить в корзину</button>
       </div>
     </div>
